@@ -32,6 +32,15 @@ public interface GameSearch<M, S extends GameState<M>, H extends GameHeuristic<M
 	 */
 	M getBestMove(int depth);
 	
+	
+	/**
+	 * Sets the initial state before calling {@link #getBestMove(int)}
+	 * 
+	 * @param depth The maximum depth
+	 * @return
+	 */
+	M getBestMove(S state, int depth);
+	
 	/**
 	 * Get the current state
 	 * 

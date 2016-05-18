@@ -55,7 +55,4 @@ public interface GameState<M>
 	 */
 	public long longHashCode();
 	
-	//aggiunta per sistemare disagi
-	public void setFinalPhase();
-	
 }

@@ -70,6 +70,13 @@ public class GameNegamax<M, S extends GameState<M>,  H extends GameHeuristic<M,S
         return bestMove;
 	}
 
+	@Override
+	public M getBestMove(S state, int depth)
+	{
+		this.setState(state);
+		return getBestMove(depth);
+	}
+	
 	protected double negamax(int depth, double alpha, double beta)
 	{
 		
@@ -83,7 +90,7 @@ public class GameNegamax<M, S extends GameState<M>,  H extends GameHeuristic<M,S
         	if(state.isOver())
         	{
         		//reachedFinalState=true;
-        		return value/(initialDepth-depth+1); //una vittoria oggi è¨ meglio di una gallina domani
+        		return value/(initialDepth-depth+1); //a victory now is better than a chicken tomorrow :)
         	}
             return value;
         }
