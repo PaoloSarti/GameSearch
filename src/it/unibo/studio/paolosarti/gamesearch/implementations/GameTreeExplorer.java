@@ -8,7 +8,7 @@ import it.unibo.studio.paolosarti.gamesearch.interfaces.GameState;
 
 /**
  * Explores (visits) the Game Tree depth first, executing the specified action at every node.<br/>
- * Use it mainly for debugging purposes 
+ * Use it mainly for debugging purposes.
  * 
  * @author Paolo
  *
